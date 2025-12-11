@@ -1,42 +1,42 @@
-import { Zap, GitBranch, BarChart3, Shield, Workflow, Users } from "lucide-react";
+import { Bell, Scan, Wallet, MapPin, TrendingUp, Share2 } from "lucide-react";
 
 const Features = () => {
   const features = [
     {
-      icon: Zap,
-      title: "Lightning-Fast Builds",
-      description: "Deploy in seconds, not minutes. Our optimized infrastructure ensures your code goes live instantly.",
-      highlight: "10x faster",
+      icon: Scan,
+      title: "Instant Card Capture",
+      description: "Snap a photo or forward your email. Cardly automatically extracts the balance, expiration, and barcode.",
+      highlight: "2-second add",
     },
     {
-      icon: GitBranch,
-      title: "Smart Branching",
-      description: "AI-powered branch management suggests optimal merge strategies and prevents conflicts before they happen.",
-      highlight: "Zero conflicts",
+      icon: Bell,
+      title: "Smart Reminders",
+      description: "Get notified before cards expire and when you're near a store where you can use one.",
+      highlight: "Never expire",
     },
     {
-      icon: BarChart3,
-      title: "Real-Time Analytics",
-      description: "Track every metric that matters. From sprint velocity to deployment frequency, see it all in one place.",
-      highlight: "360° visibility",
+      icon: Wallet,
+      title: "All Cards, One Place",
+      description: "Physical cards, e-gift cards, store credit, loyalty points—everything organized beautifully.",
+      highlight: "Unified wallet",
     },
     {
-      icon: Shield,
-      title: "Enterprise Security",
-      description: "SOC 2 Type II certified. Your code and data are protected by industry-leading security standards.",
-      highlight: "Bank-grade",
+      icon: MapPin,
+      title: "Location Alerts",
+      description: "Walking past Starbucks? Cardly reminds you about that $12 balance waiting to be spent.",
+      highlight: "Geo-aware",
     },
     {
-      icon: Workflow,
-      title: "Workflow Automation",
-      description: "Automate repetitive tasks with our visual workflow builder. No code required.",
-      highlight: "500+ templates",
+      icon: TrendingUp,
+      title: "Spending Insights",
+      description: "See how much you've saved, track balances over time, and never lose money again.",
+      highlight: "Smart stats",
     },
     {
-      icon: Users,
-      title: "Team Collaboration",
-      description: "Built-in code review, async video comments, and real-time editing. Your remote team works as one.",
-      highlight: "Seamless sync",
+      icon: Share2,
+      title: "Gift & Transfer",
+      description: "Don't want a card? Easily gift it to friends or family, or transfer the balance.",
+      highlight: "Easy sharing",
     },
   ];
 
@@ -48,12 +48,11 @@ const Features = () => {
             Features
           </span>
           <h2 className="text-3xl lg:text-5xl font-heading font-bold mb-6">
-            Everything You Need to{" "}
-            <span className="text-gradient">Ship Faster</span>
+            Your Gift Cards,{" "}
+            <span className="text-gradient">Finally Organized</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            A complete toolkit designed for modern development teams. 
-            Stop juggling tools and start shipping products.
+            Cardly does the heavy lifting so you can focus on spending—not searching.
           </p>
         </div>
 

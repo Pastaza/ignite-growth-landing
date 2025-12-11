@@ -8,41 +8,41 @@ import {
 const FAQ = () => {
   const faqs = [
     {
-      question: "How long does it take to get started?",
-      answer: "Most teams are up and running within 24 hours. Our onboarding flow is designed to be intuitive, and we offer live support during your first week to ensure a smooth transition. For enterprise deployments, we provide dedicated onboarding assistance.",
+      question: "Is Cardly free?",
+      answer: "We're still finalizing pricing, but we're committed to making Cardly accessible. Early waitlist members will receive special founding member pricing and exclusive perks. Join the waitlist to be the first to know!",
     },
     {
-      question: "Can I migrate my existing projects?",
-      answer: "Absolutely. We have built-in migration tools for GitHub, GitLab, Bitbucket, Jira, and most popular development tools. Our migration assistant walks you through the process step-by-step, and we offer white-glove migration support for enterprise customers.",
+      question: "How do I add my gift cards?",
+      answer: "Adding cards is super easy! You can snap a photo of physical cards, scan barcodes, forward email gift cards, or manually enter details. Cardly uses AI to automatically extract balance, expiration dates, and store information.",
     },
     {
-      question: "What integrations do you support?",
-      answer: "We integrate with 100+ tools including Slack, GitHub, GitLab, Jira, Linear, Figma, AWS, GCP, Azure, and more. We also offer a robust API and webhooks for custom integrations.",
+      question: "Will my gift card data be secure?",
+      answer: "Absolutely. Security is our top priority. All data is encrypted end-to-end, and we never store full card numbers on our servers. We use bank-level security protocols to protect your information.",
     },
     {
-      question: "Is my data secure?",
-      answer: "Security is our top priority. We're SOC 2 Type II certified, GDPR compliant, and offer enterprise-grade encryption at rest and in transit. We also support SSO/SAML, audit logs, and role-based access controls.",
+      question: "Which stores and gift cards are supported?",
+      answer: "Cardly works with virtually any gift card—Amazon, Starbucks, Target, Walmart, restaurant chains, and thousands more. If it's a gift card, Cardly can track it.",
     },
     {
-      question: "What happens after my free trial ends?",
-      answer: "You'll have the option to choose a paid plan that fits your needs. Your data and projects remain intact—nothing is lost. If you decide not to continue, you can export all your data before your account is closed.",
+      question: "How do location-based reminders work?",
+      answer: "When you enable location services, Cardly can detect when you're near a store where you have a gift card balance. You'll get a gentle notification reminding you to use it. You're always in control of location permissions.",
     },
     {
-      question: "Do you offer discounts for startups or nonprofits?",
-      answer: "Yes! We offer 50% off for early-stage startups (under $5M in funding) and 30% off for registered nonprofits. Contact our sales team to learn more about eligibility.",
+      question: "Can I share gift cards with family members?",
+      answer: "Yes! Cardly makes it easy to gift or transfer cards to friends and family. Perfect for when you receive a card to a store you don't shop at.",
     },
     {
-      question: "Can I use Velocity for on-premise deployments?",
-      answer: "Yes, our Enterprise plan includes an on-premise deployment option. This is ideal for organizations with strict data residency requirements or those in regulated industries.",
+      question: "What happens to expired gift cards?",
+      answer: "With Cardly, you'll get reminders well before expiration so you can use your balance. But if a card does expire, we'll archive it and help you check if the store offers any recovery options—some do!",
     },
     {
-      question: "What kind of support do you offer?",
-      answer: "All plans include email support. Pro plans get priority support with a 4-hour SLA. Enterprise customers receive a dedicated Customer Success Manager, 24/7 phone support, and custom SLAs.",
+      question: "When will Cardly launch?",
+      answer: "We're currently in private beta and planning to launch publicly in early 2025. Join the waitlist to get early access and help shape the product!",
     },
   ];
 
   return (
-    <section id="faq" className="py-20 lg:py-32 bg-background">
+    <section id="faq" className="py-20 lg:py-32 bg-soft-gray">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block px-4 py-2 bg-accent text-accent-foreground rounded-full text-sm font-medium mb-4">
@@ -52,7 +52,7 @@ const FAQ = () => {
             Frequently Asked Questions
           </h2>
           <p className="text-lg text-muted-foreground">
-            Everything you need to know about Velocity. Can't find an answer? Contact our team.
+            Everything you need to know about Cardly. More questions? We'd love to hear from you.
           </p>
         </div>
 
@@ -62,7 +62,7 @@ const FAQ = () => {
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="border border-border rounded-xl px-6 data-[state=open]:border-primary/30 data-[state=open]:shadow-md transition-all"
+                className="border border-border rounded-xl px-6 bg-card data-[state=open]:border-primary/30 data-[state=open]:shadow-md transition-all"
               >
                 <AccordionTrigger className="text-left font-heading font-semibold text-foreground hover:no-underline py-5">
                   {faq.question}

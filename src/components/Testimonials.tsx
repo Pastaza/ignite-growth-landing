@@ -6,32 +6,28 @@ const Testimonials = () => {
 
   const testimonials = [
     {
-      quote: "Velocity transformed how we ship products. What used to take us 3 months now takes 3 weeks. The ROI was immediate and the team actually enjoys their work now.",
-      name: "Sarah Chen",
-      role: "VP of Engineering",
-      company: "TechFlow",
-      avatar: "SC",
+      quote: "I found $340 in forgotten gift cards when I first set up Cardly. That alone paid for years of any subscription they could ever charge. Absolute game changer.",
+      name: "Jessica M.",
+      role: "Busy Mom of 3",
+      avatar: "JM",
     },
     {
-      quote: "We evaluated 12 different tools before choosing Velocity. It's the only platform that truly understands modern development workflows. Game changer.",
-      name: "Marcus Johnson",
-      role: "CTO",
-      company: "ScaleUp Labs",
-      avatar: "MJ",
-    },
-    {
-      quote: "The automation capabilities alone saved us 40 engineering hours per week. But the real win is how aligned our teams are now. Communication has never been better.",
-      name: "Emily Rodriguez",
-      role: "Head of Product",
-      company: "InnovateCo",
-      avatar: "ER",
-    },
-    {
-      quote: "I was skeptical at first—we've been burned by 'all-in-one' platforms before. But Velocity actually delivers. Our deployment frequency is up 300%.",
-      name: "David Kim",
-      role: "Engineering Lead",
-      company: "Nexus Digital",
+      quote: "The location alerts are genius. I walked past a Target and Cardly reminded me I had $75 to spend. I would have completely forgotten otherwise.",
+      name: "David K.",
+      role: "Sales Manager",
       avatar: "DK",
+    },
+    {
+      quote: "My wife and I used to have gift cards scattered everywhere. Now everything's in one place and we actually use them. We've saved over $500 this year alone.",
+      name: "Michael T.",
+      role: "Software Engineer",
+      avatar: "MT",
+    },
+    {
+      quote: "I get gift cards for every holiday and birthday. Before Cardly, half of them expired. Now? I haven't lost a single dollar in 8 months.",
+      name: "Sarah L.",
+      role: "Marketing Director",
+      avatar: "SL",
     },
   ];
 
@@ -51,10 +47,10 @@ const Testimonials = () => {
             Testimonials
           </span>
           <h2 className="text-3xl lg:text-5xl font-heading font-bold text-primary-foreground mb-6">
-            Loved by Teams Worldwide
+            People Love Cardly
           </h2>
           <p className="text-lg text-primary-foreground/70">
-            Don't just take our word for it. Here's what engineering leaders say about Velocity.
+            Join thousands who've stopped losing money to forgotten gift cards.
           </p>
         </div>
 
@@ -80,7 +76,7 @@ const Testimonials = () => {
                     {testimonials[activeIndex].name}
                   </p>
                   <p className="text-sm text-primary-foreground/60">
-                    {testimonials[activeIndex].role} at {testimonials[activeIndex].company}
+                    {testimonials[activeIndex].role}
                   </p>
                 </div>
               </div>
@@ -122,10 +118,10 @@ const Testimonials = () => {
         {/* Stats Row */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 max-w-4xl mx-auto">
           {[
-            { value: "2,847+", label: "Active Teams" },
-            { value: "99.9%", label: "Uptime SLA" },
-            { value: "14 days", label: "Avg. Onboarding" },
-            { value: "24/7", label: "Support" },
+            { value: "2,400+", label: "Waitlist signups" },
+            { value: "$1.2M+", label: "In cards tracked (beta)" },
+            { value: "4.9★", label: "Beta user rating" },
+            { value: "0", label: "Cards expired" },
           ].map((stat, index) => (
             <div key={index} className="text-center">
               <p className="text-3xl lg:text-4xl font-heading font-bold text-primary mb-1">

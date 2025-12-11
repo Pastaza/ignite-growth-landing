@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Gift } from "lucide-react";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -16,7 +16,7 @@ const Navbar = () => {
 
   const navLinks = [
     { name: "Features", href: "#features" },
-    { name: "Pricing", href: "#pricing" },
+    { name: "How It Works", href: "#how-it-works" },
     { name: "Testimonials", href: "#testimonials" },
     { name: "FAQ", href: "#faq" },
   ];
@@ -33,10 +33,10 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-gradient-cta rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">V</span>
+            <div className="w-9 h-9 bg-gradient-cta rounded-xl flex items-center justify-center">
+              <Gift className="w-5 h-5 text-primary-foreground" />
             </div>
-            <span className="font-heading font-bold text-xl text-foreground">Velocity</span>
+            <span className="font-heading font-bold text-xl text-foreground">Cardly</span>
           </a>
 
           {/* Desktop Navigation */}
@@ -54,11 +54,8 @@ const Navbar = () => {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-4">
-            <Button variant="ghost" size="sm">
-              Log in
-            </Button>
             <Button variant="default" size="sm">
-              Start Free Trial
+              Join the Waitlist
             </Button>
           </div>
 
@@ -89,12 +86,9 @@ const Navbar = () => {
                   {link.name}
                 </a>
               ))}
-              <div className="flex flex-col gap-2 pt-4 border-t border-border">
-                <Button variant="ghost" size="sm">
-                  Log in
-                </Button>
-                <Button variant="default" size="sm">
-                  Start Free Trial
+              <div className="pt-4 border-t border-border">
+                <Button variant="default" size="sm" className="w-full">
+                  Join the Waitlist
                 </Button>
               </div>
             </div>
