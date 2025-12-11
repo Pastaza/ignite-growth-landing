@@ -1,26 +1,26 @@
-import { Clock, AlertTriangle, Puzzle, RefreshCw } from "lucide-react";
+import { Clock, Search, Frown, Ban } from "lucide-react";
 
 const Problems = () => {
   const problems = [
     {
       icon: Clock,
-      title: "Endless Development Cycles",
-      description: "Projects drag on for months. Deadlines slip. Your competitors launch while you're still debugging.",
+      title: "Expiration Surprise",
+      description: "You find a $50 gift card in your drawer—only to discover it expired last month. Money gone.",
     },
     {
-      icon: AlertTriangle,
-      title: "Scattered Tools & Data",
-      description: "Information lives in 10 different apps. Context switching kills productivity and morale.",
+      icon: Search,
+      title: "The Balance Mystery",
+      description: "Was it $23.47 or $3.47 left? You can't remember, and checking takes forever.",
     },
     {
-      icon: Puzzle,
-      title: "Poor Team Alignment",
-      description: "Engineering, product, and design speak different languages. Miscommunication causes rework.",
+      icon: Frown,
+      title: "Forgotten at Checkout",
+      description: "Standing in line at the store, you remember you have a gift card—but it's at home.",
     },
     {
-      icon: RefreshCw,
-      title: "Manual, Repetitive Work",
-      description: "Your team wastes hours on tasks that should be automated. Innovation takes a back seat.",
+      icon: Ban,
+      title: "Scattered Everywhere",
+      description: "Physical cards, e-gift cards, loyalty points... they're spread across 10 different places.",
     },
   ];
 
@@ -35,8 +35,8 @@ const Problems = () => {
             Sound Familiar?
           </h2>
           <p className="text-lg text-muted-foreground">
-            Modern product teams are drowning in complexity. The tools meant to help 
-            have become part of the problem.
+            Americans waste billions on unused gift cards every year. 
+            It's not that you don't want to use them—life just gets in the way.
           </p>
         </div>
 

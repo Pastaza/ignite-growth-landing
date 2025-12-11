@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Gift } from "lucide-react";
 
 const CTABanner = () => {
   return (
@@ -16,24 +16,21 @@ const CTABanner = () => {
       
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-foreground/20 backdrop-blur-sm rounded-full mb-8">
-            <Sparkles className="w-4 h-4 text-primary-foreground" />
-            <span className="text-sm font-medium text-primary-foreground">
-              Limited time: 20% off annual plans
-            </span>
+          {/* Icon */}
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-foreground/20 backdrop-blur-sm rounded-2xl mb-8">
+            <Gift className="w-8 h-8 text-primary-foreground" />
           </div>
           
           {/* Headline */}
           <h2 className="text-3xl sm:text-4xl lg:text-6xl font-heading font-bold text-primary-foreground leading-tight mb-6">
-            Ready to Ship Products{" "}
+            Stop Losing Money{" "}
             <br className="hidden sm:block" />
-            10x Faster?
+            to Forgotten Gift Cards
           </h2>
           
           <p className="text-lg lg:text-xl text-primary-foreground/80 max-w-2xl mx-auto mb-10">
-            Join 2,847+ teams who've already transformed their development workflow. 
-            Start your free trial today—no credit card required.
+            Join 2,400+ smart savers on the waitlist. Be the first to know when Cardly launches 
+            and get exclusive early access.
           </p>
           
           {/* CTAs */}
@@ -42,21 +39,14 @@ const CTABanner = () => {
               size="xl"
               className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 shadow-xl"
             >
-              Start Free Trial
+              Join the Waitlist
               <ArrowRight className="w-5 h-5" />
-            </Button>
-            <Button
-              variant="heroOutline"
-              size="xl"
-              className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
-            >
-              Schedule a Demo
             </Button>
           </div>
           
           {/* Trust Badge */}
           <p className="mt-8 text-sm text-primary-foreground/60">
-            ✓ 14-day free trial &nbsp; ✓ No credit card required &nbsp; ✓ Cancel anytime
+            ✓ Free to join &nbsp; ✓ No spam, ever &nbsp; ✓ Early access perks
           </p>
         </div>
       </div>

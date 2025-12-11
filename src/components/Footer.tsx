@@ -1,32 +1,28 @@
+import { Gift } from "lucide-react";
+
 const Footer = () => {
   const footerLinks = {
     Product: [
       { name: "Features", href: "#features" },
-      { name: "Pricing", href: "#pricing" },
-      { name: "Integrations", href: "#" },
-      { name: "Changelog", href: "#" },
+      { name: "How It Works", href: "#how-it-works" },
+      { name: "Pricing", href: "#" },
       { name: "Roadmap", href: "#" },
     ],
     Company: [
       { name: "About", href: "#" },
       { name: "Blog", href: "#" },
       { name: "Careers", href: "#" },
-      { name: "Press Kit", href: "#" },
       { name: "Contact", href: "#" },
     ],
     Resources: [
-      { name: "Documentation", href: "#" },
-      { name: "API Reference", href: "#" },
-      { name: "Guides", href: "#" },
+      { name: "Help Center", href: "#" },
+      { name: "Gift Card Tips", href: "#" },
       { name: "Community", href: "#" },
-      { name: "Status", href: "#" },
     ],
     Legal: [
       { name: "Privacy Policy", href: "#" },
       { name: "Terms of Service", href: "#" },
       { name: "Cookie Policy", href: "#" },
-      { name: "Security", href: "#" },
-      { name: "GDPR", href: "#" },
     ],
   };
 
@@ -37,18 +33,18 @@ const Footer = () => {
           {/* Logo & Description */}
           <div className="col-span-2">
             <a href="#" className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-cta rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg">V</span>
+              <div className="w-9 h-9 bg-gradient-cta rounded-xl flex items-center justify-center">
+                <Gift className="w-5 h-5 text-primary-foreground" />
               </div>
-              <span className="font-heading font-bold text-xl text-primary-foreground">Velocity</span>
+              <span className="font-heading font-bold text-xl text-primary-foreground">Cardly</span>
             </a>
             <p className="text-sm text-primary-foreground/60 mb-6 max-w-xs">
-              The all-in-one platform that transforms how teams build, launch, and scale products.
+              The smart gift card manager that helps you track, remember, and spend every dollar.
             </p>
             
             {/* Social Links */}
             <div className="flex gap-4">
-              {["Twitter", "GitHub", "LinkedIn", "YouTube"].map((social) => (
+              {["Twitter", "Instagram", "TikTok"].map((social) => (
                 <a
                   key={social}
                   href="#"
@@ -85,12 +81,12 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-primary-foreground/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-primary-foreground/40">
-            © 2024 Velocity. All rights reserved.
+            © 2024 Cardly. All rights reserved.
           </p>
           
           <div className="flex items-center gap-6">
             <span className="text-xs text-primary-foreground/40">
-              Made with ❤️ for developers worldwide
+              Made with ❤️ for gift card hoarders everywhere
             </span>
           </div>
         </div>

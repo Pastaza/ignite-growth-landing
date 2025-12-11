@@ -3,9 +3,8 @@ import Hero from "@/components/Hero";
 import SocialProof from "@/components/SocialProof";
 import Problems from "@/components/Problems";
 import Features from "@/components/Features";
-import Transformation from "@/components/Transformation";
+import HowItWorks from "@/components/HowItWorks";
 import Testimonials from "@/components/Testimonials";
-import Pricing from "@/components/Pricing";
 import FAQ from "@/components/FAQ";
 import CTABanner from "@/components/CTABanner";
 import Footer from "@/components/Footer";
@@ -18,9 +17,8 @@ const Index = () => {
       <SocialProof />
       <Problems />
       <Features />
-      <Transformation />
+      <HowItWorks />
       <Testimonials />
-      <Pricing />
       <FAQ />
       <CTABanner />
       <Footer />
