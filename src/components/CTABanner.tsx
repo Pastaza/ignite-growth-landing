@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Gift } from "lucide-react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 const CTABanner = () => {
   return (
@@ -36,7 +36,7 @@ const CTABanner = () => {
           
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/join-waitlist">
+            <Link href="/join-waitlist">
               <Button
                 size="xl"
                 className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 shadow-xl"

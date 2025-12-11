@@ -1,11 +1,16 @@
+"use client";
+
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,14 +37,15 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          <a href="#" className="flex items-center gap-2">
-            <img 
-              src="/CardlyGooglePlayIcon.png" 
-              alt="Cardly Logo" 
-              className="h-9 w-auto rounded-lg"
-            />
-            <span className="font-heading font-bold text-xl text-foreground">Cardly</span>
-          </a>
+          <Link href="/" className="flex items-center gap-2" aria-current={pathname === "/" ? "page" : undefined}>
+                        <Image
+                          src="/CardlyGooglePlayIcon.png"
+                          alt="Cardly Logo"
+                          width={36} // h-9 = 36px
+                          height={36} // Assuming square aspect ratio
+                          className="h-9 w-auto rounded-lg"
+                        />            <span className="font-heading font-bold text-xl text-foreground">Cardly</span>
+          </Link>
 
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
@@ -54,7 +60,7 @@ const Navbar = () => {
           </div>
 
           <div className="hidden md:flex items-center gap-4">
-            <Link to="/join-waitlist">
+            <Link href="/join-waitlist" aria-current={pathname === "/join-waitlist" ? "page" : undefined}>
               <Button variant="default" size="sm">
                 Join the Waitlist
               </Button>
@@ -87,7 +93,7 @@ const Navbar = () => {
                 </a>
               ))}
               <div className="pt-4 border-t border-border">
-                <Link to="/join-waitlist" onClick={() => setIsMobileMenuOpen(false)}>
+                <Link href="/join-waitlist" onClick={() => setIsMobileMenuOpen(false)}>
                   <Button variant="default" size="sm" className="w-full">
                     Join the Waitlist
                   </Button>
