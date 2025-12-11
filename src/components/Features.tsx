@@ -3,42 +3,24 @@ import { Bell, Scan, Wallet, MapPin, TrendingUp, Share2 } from "lucide-react";
 const Features = () => {
   const features = [
     {
-      icon: Scan,
-      title: "Instant Card Capture",
-      description: "Snap a photo or forward your email. Cardly automatically extracts the balance, expiration, and barcode.",
-      highlight: "2-second add",
-    },
-    {
       icon: Bell,
       title: "Smart Reminders",
-      description: "Get notified before cards expire and when you're near a store where you can use one.",
+      description: "Get notified before cards expire.",
       highlight: "Never expire",
     },
     {
       icon: Wallet,
-      title: "All Cards, One Place",
-      description: "Physical cards, e-gift cards, store credit, loyalty points—everything organized beautifully.",
+      title: "All Gift Cards, One Place",
+      description: "Physical cards, e-gift cards. Many features more to come",
       highlight: "Unified wallet",
-    },
-    {
-      icon: MapPin,
-      title: "Location Alerts",
-      description: "Walking past Starbucks? Cardly reminds you about that $12 balance waiting to be spent.",
-      highlight: "Geo-aware",
-    },
+    }, 
     {
       icon: TrendingUp,
       title: "Spending Insights",
       description: "See how much you've saved, track balances over time, and never lose money again.",
       highlight: "Smart stats",
     },
-    {
-      icon: Share2,
-      title: "Gift & Transfer",
-      description: "Don't want a card? Easily gift it to friends or family, or transfer the balance.",
-      highlight: "Easy sharing",
-    },
-  ];
+    ];
 
   return (
     <section id="features" className="py-20 lg:py-32 bg-soft-gray">

@@ -41,10 +41,12 @@ const Hero = () => {
             
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-up delay-300">
-              <Button variant="hero" size="xl">
+            <Button variant="hero" size="xl" asChild>
+              <a href="/join-waitlist">
                 Join the Waitlist
                 <ArrowRight className="w-5 h-5" />
-              </Button>
+              </a>
+            </Button> 
               <Button variant="heroOutline" size="xl">
                 See How It Works
               </Button>
@@ -64,7 +66,7 @@ const Hero = () => {
                   ))}
                 </div>
                 <div className="text-sm text-muted-foreground">
-                  <span className="font-semibold text-foreground">2,400+</span> people on the waitlist
+                  <span className="font-semibold text-foreground"></span>
                 </div>
               </div>
             </div>

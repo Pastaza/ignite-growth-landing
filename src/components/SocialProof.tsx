@@ -8,10 +8,10 @@ const SocialProof = () => {
         
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
           {[
-            { value: "$21B", label: "in gift cards go unused yearly" },
-            { value: "47%", label: "of people forget their cards" },
+            { value: "$21B", label: "in gift cards go unused yearly. America alone" },
+            { value: "47%", label: "of people forget their cards on avg." },
             { value: "6 months", label: "avg. time cards sit unused" },
-            { value: "$175", label: "lost per household annually" },
+            { value: "$175", label: "lost per household annually avg" },
           ].map((stat, index) => (
             <div key={index} className="text-center">
               <p className="text-2xl lg:text-3xl font-heading font-bold text-primary mb-1">

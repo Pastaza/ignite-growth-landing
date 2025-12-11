@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Gift } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -32,15 +32,15 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Logo */}
           <a href="#" className="flex items-center gap-2">
-            <div className="w-9 h-9 bg-gradient-cta rounded-xl flex items-center justify-center">
-              <Gift className="w-5 h-5 text-primary-foreground" />
-            </div>
+            <img 
+              src="/CardlyGooglePlayIcon.png" 
+              alt="Cardly Logo" 
+              className="h-9 w-auto rounded-lg"
+            />
             <span className="font-heading font-bold text-xl text-foreground">Cardly</span>
           </a>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <a
@@ -53,16 +53,14 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-4">
-            <Link to="/waitlist">
+            <Link to="/join-waitlist">
               <Button variant="default" size="sm">
                 Join the Waitlist
               </Button>
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             className="md:hidden p-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -75,7 +73,6 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden py-4 border-t border-border animate-fade-in">
             <div className="flex flex-col gap-4">
@@ -90,7 +87,7 @@ const Navbar = () => {
                 </a>
               ))}
               <div className="pt-4 border-t border-border">
-                <Link to="/waitlist">
+                <Link to="/join-waitlist" onClick={() => setIsMobileMenuOpen(false)}>
                   <Button variant="default" size="sm" className="w-full">
                     Join the Waitlist
                   </Button>

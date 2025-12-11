@@ -118,9 +118,9 @@ const Testimonials = () => {
         {/* Stats Row */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 max-w-4xl mx-auto">
           {[
-            { value: "2,400+", label: "Waitlist signups" },
-            { value: "$1.2M+", label: "In cards tracked (beta)" },
-            { value: "4.9★", label: "Beta user rating" },
+            { value: "100+", label: "Waitlist signups" },
+            { value: "$1+", label: "In cards tracked (beta)" },
+            { value: "5★", label: "Beta user rating" },
             { value: "0", label: "Cards expired" },
           ].map((stat, index) => (
             <div key={index} className="text-center">
