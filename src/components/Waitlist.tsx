@@ -110,7 +110,7 @@ const Waitlist = () => {
                     </Button>
                   </div>
                   <p className="text-sm text-muted-foreground">
-                    No spam, ever. We'll only email you about the launch.
+                    No spam. We'll only email you about the launch.
                   </p>
                 </form>
               ) : (
