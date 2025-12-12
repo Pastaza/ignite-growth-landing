@@ -35,7 +35,7 @@ const JoinWaitlist: React.FC = () => {
         throw error;
       }
 
-      setMessage('Successfully joined the waitlist! Check your inbox for updates. Follow us on isntagram @cardlyai.dev');
+      setMessage('Successfully joined the waitlist! Check your inbox for updates. Follow us on Instagram @cardlyai.dev');
       setIsError(false);
       setEmail('');
     } catch (error: any) {
