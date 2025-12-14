@@ -7,10 +7,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Label } from "@/components/ui/label";
 import { supabase } from '@/lib/supabaseClient';
 
-interface SupabaseError {
-  message?: string;
-}
-
 const WaitlistForm: React.FC = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -43,9 +39,9 @@ const WaitlistForm: React.FC = () => {
       setIsError(false);
       setEmail('');
     } catch (error: unknown) {
-      const supabaseError = error as SupabaseError;
-      console.error('Error joining waitlist:', supabaseError.message);
-      setMessage(`Failed to join waitlist: ${supabaseError.message || 'Please try again.'}`);
+      const errorMessage = error instanceof Error ? error.message : 'Please try again.';
+      console.error('Error joining waitlist:', errorMessage);
+      setMessage(`Failed to join waitlist: ${errorMessage}`);
       setIsError(true);
     } finally {
       setIsLoading(false);
