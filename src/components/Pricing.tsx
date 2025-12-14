@@ -212,7 +212,7 @@ const Pricing = () => {
                       or {tier.yearlyPrice}
                     </span>
                     {tier.yearlySaving && (
-                      <span className="ml-2 text-xs font-semibold text-green-600 bg-green-100 px-2 py-0.5 rounded-full">
+                      <span className="ml-2 text-xs font-semibold text-primary bg-primary/10 px-2 py-0.5 rounded-full">
                         {tier.yearlySaving}
                       </span>
                     )}
@@ -263,9 +263,20 @@ const Pricing = () => {
 
         {/* Note */}
         <div className="text-center mt-12">
-          <p className="text-sm text-muted-foreground">
-            ✓ No credit card required to join waitlist &nbsp; ✓ Early access to beta &nbsp; ✓ Special founding member pricing
-          </p>
+          <ul className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-muted-foreground list-none">
+            <li className="flex items-center gap-1">
+              <Check className="w-4 h-4 text-primary" aria-hidden="true" />
+              <span>No credit card required to join waitlist</span>
+            </li>
+            <li className="flex items-center gap-1">
+              <Check className="w-4 h-4 text-primary" aria-hidden="true" />
+              <span>Early access to beta</span>
+            </li>
+            <li className="flex items-center gap-1">
+              <Check className="w-4 h-4 text-primary" aria-hidden="true" />
+              <span>Special founding member pricing</span>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
