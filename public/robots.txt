@@ -1,3 +1,7 @@
+# Sitemap
+Sitemap: https://cardly.app/sitemap.xml
+
+# Crawl rules
 User-agent: Googlebot
 Allow: /
 
@@ -12,3 +16,6 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+# Block admin and private routes if any
+Disallow: /api/
