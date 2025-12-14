@@ -168,6 +168,9 @@ const Pricing = () => {
           <p className="text-lg text-muted-foreground">
             Start free and upgrade when you need more. All plans include core gift card tracking features.
           </p>
+          <p className="text-sm text-muted-foreground mt-2">
+            All prices are in NZD (New Zealand Dollars)
+          </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-4 max-w-7xl mx-auto">
