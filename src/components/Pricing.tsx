@@ -1,6 +1,4 @@
-import { Button } from "@/components/ui/button";
 import { Check, Star, Sparkles, Users } from "lucide-react";
-import Link from "next/link";
 
 const Pricing = () => {
   const tiers = [
@@ -224,17 +222,6 @@ const Pricing = () => {
               <p className="text-sm text-muted-foreground mb-6">
                 {tier.description}
               </p>
-
-              {/* CTA Button */}
-              <Link href="/join-waitlist" className="block mb-6">
-                <Button
-                  className="w-full"
-                  variant={tier.highlighted ? "hero" : "outline"}
-                  size="lg"
-                >
-                  Join Waitlist
-                </Button>
-              </Link>
 
               {/* Features */}
               <div className="space-y-4">
