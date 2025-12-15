@@ -103,6 +103,12 @@ const Pricing = () => {
             "Track updated timestamps",
           ],
         },
+        {
+          category: "Notifications",
+          items: [
+            "Email notifications for expiring cards",
+          ],
+        },
       ],
     },
     {
@@ -123,7 +129,6 @@ const Pricing = () => {
             "Export data to CSV",
             "Dark mode toggle",
             "Import gift cards from file",
-            "Email notifications for expiring cards",
           ],
         },
         {
