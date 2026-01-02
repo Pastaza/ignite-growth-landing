@@ -1,7 +1,7 @@
 'use client';
 
 import { createContext, useContext, useEffect, useState } from 'react';
-import { User, Session } from '@supabase/supabase-js';
+import { User, Session, AuthResponse } from '@supabase/supabase-js';
 import { supabase } from '@/lib/supabase';
 import { UserProfile } from '@/lib/userProfile';
 
@@ -25,8 +25,11 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    if (!supabase) return;
+
     // Get initial session
-    supabase.auth.getSession().then(({ data: { session } }) => {
+    supabase.auth.getSession().then((response) => {
+      const session = response.data.session;
       setSession(session);
       setUser(session?.user ?? null);
       if (session?.user) {
@@ -54,6 +57,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const fetchProfile = async (userId: string) => {
+    if (!supabase) return;
     try {
       const { data, error } = await supabase
         .from('profiles')
@@ -71,6 +75,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   };
 
   const signIn = async (email: string, password: string) => {
+    if (!supabase) throw new Error('Supabase not initialized');
     const { error } = await supabase.auth.signInWithPassword({
       email,
       password,
@@ -79,6 +84,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   };
 
   const signUp = async (email: string, password: string) => {
+    if (!supabase) throw new Error('Supabase not initialized');
     const { error } = await supabase.auth.signUp({
       email,
       password,
@@ -87,12 +93,13 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   };
 
   const signOut = async () => {
+    if (!supabase) throw new Error('Supabase not initialized');
     const { error } = await supabase.auth.signOut();
     if (error) throw error;
   };
 
   const updateProfile = async (updates: Partial<UserProfile>) => {
-    if (!user) throw new Error('No user logged in');
+    if (!user || !supabase) throw new Error('No user logged in');
 
     const { error } = await supabase
       .from('profiles')

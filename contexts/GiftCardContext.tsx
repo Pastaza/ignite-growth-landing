@@ -25,7 +25,7 @@ export function GiftCardProvider({ children }: { children: React.ReactNode }) {
   const [loading, setLoading] = useState(true);
 
   const fetchCards = useCallback(async () => {
-    if (!user) {
+    if (!user || !supabase) {
       setCards([]);
       setLoading(false);
       return;
@@ -52,7 +52,7 @@ export function GiftCardProvider({ children }: { children: React.ReactNode }) {
   }, [fetchCards]);
 
   const addCard = async (cardData: Omit<GiftCard, 'id' | 'user_id' | 'created_at' | 'updated_at'>) => {
-    if (!user) throw new Error('User must be logged in');
+    if (!user || !supabase) throw new Error('User must be logged in');
 
     const { data, error } = await supabase
       .from('gift_cards')
@@ -70,6 +70,7 @@ export function GiftCardProvider({ children }: { children: React.ReactNode }) {
   };
 
   const updateCard = async (id: string, updates: Partial<GiftCard>) => {
+    if (!supabase) throw new Error('Supabase not initialized');
     const { data, error } = await supabase
       .from('gift_cards')
       .update(updates)
@@ -82,6 +83,7 @@ export function GiftCardProvider({ children }: { children: React.ReactNode }) {
   };
 
   const deleteCard = async (id: string) => {
+    if (!supabase) throw new Error('Supabase not initialized');
     const { error } = await supabase.from('gift_cards').delete().eq('id', id);
 
     if (error) throw error;
@@ -93,6 +95,7 @@ export function GiftCardProvider({ children }: { children: React.ReactNode }) {
   };
 
   const getTransactions = async (cardId: string): Promise<Transaction[]> => {
+    if (!supabase) throw new Error('Supabase not initialized');
     const { data, error } = await supabase
       .from('transactions')
       .select('*')
@@ -104,6 +107,7 @@ export function GiftCardProvider({ children }: { children: React.ReactNode }) {
   };
 
   const addTransaction = async (transactionData: Omit<Transaction, 'id' | 'created_at'>) => {
+    if (!supabase) throw new Error('Supabase not initialized');
     const { error } = await supabase.from('transactions').insert([transactionData]);
 
     if (error) throw error;

@@ -4,6 +4,14 @@ import { addDays } from 'date-fns';
 
 export async function GET(request: Request) {
   try {
+    // Check if supabase admin is configured
+    if (!supabaseAdmin) {
+      return NextResponse.json(
+        { error: 'Supabase admin not configured' },
+        { status: 500 }
+      );
+    }
+
     // Verify cron secret
     const authHeader = request.headers.get('authorization');
     if (authHeader !== `Bearer ${process.env.CRON_SECRET}`) {

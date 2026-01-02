@@ -33,6 +33,17 @@ async function sendExpirationReminders() {
     console.log(`Found ${cards.length} cards expiring soon`);
 
     // Group cards by user
+    interface CardWithProfile {
+      user_id: string;
+      profiles?: {
+        email: string;
+        notification_preferences?: {
+          email?: boolean;
+          expiration_reminders?: boolean;
+        };
+      };
+    }
+
     const cardsByUser = cards.reduce((acc, card) => {
       const userId = card.user_id;
       if (!acc[userId]) {
@@ -40,11 +51,13 @@ async function sendExpirationReminders() {
       }
       acc[userId].push(card);
       return acc;
-    }, {} as Record<string, any[]>);
+    }, {} as Record<string, typeof cards>);
 
     // Send emails (this would integrate with Resend API)
-    for (const [userId, userCards] of Object.entries(cardsByUser)) {
-      const profile = userCards[0].profiles;
+    const userEntries = Object.entries(cardsByUser) as [string, typeof cards][];
+    for (const [userId, userCards] of userEntries) {
+      const firstCard = userCards[0] as unknown as CardWithProfile;
+      const profile = firstCard?.profiles;
       
       if (profile?.notification_preferences?.email && 
           profile?.notification_preferences?.expiration_reminders) {
