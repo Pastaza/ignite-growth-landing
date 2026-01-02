@@ -11,7 +11,7 @@
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "bundler", // For Next.js 13+
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
@@ -23,15 +23,12 @@
     ],
     "paths": {
       "@/*": [
-        "./src/*"
+        "./*"
       ]
     },
     "baseUrl": ".",
-    "noImplicitAny": false,
-    "noUnusedParameters": false,
-    "noUnusedLocals": false,
-    "strictNullChecks": false,
-    "target": "ES2017"
+    "target": "ES2020",
+    "forceConsistentCasingInFileNames": true
   },
   "include": [
     "next-env.d.ts",

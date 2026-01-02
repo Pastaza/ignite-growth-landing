@@ -1,6 +1,7 @@
-import '../src/index.css';
-import { Providers } from "./providers";
+import './globals.css';
 import type { Metadata } from 'next';
+import ClientLayout from '@/components/ClientLayout';
+import Navbar from '@/components/Navbar';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://cardly.app'),
@@ -8,9 +9,9 @@ export const metadata: Metadata = {
     default: 'Cardly | Never Forget a Gift Card Again',
     template: '%s | Cardly',
   },
-  description: 'Cardly tracks all your gift cards in one place, reminds you before they expire, and helps you spend every dollar. Stop losing money to forgotten cards.',
-  authors: [{ name: 'Cardly' }],
+  description: 'Track all your gift cards in one place. Get reminders before they expire. Stop losing money to forgotten cards.',
   keywords: ['gift card manager', 'gift card tracker', 'gift card app', 'save money', 'gift card wallet', 'gift card organizer', 'gift card balance', 'gift card reminder', 'expired gift cards'],
+  authors: [{ name: 'Cardly' }],
   creator: 'Cardly',
   publisher: 'Cardly',
   robots: {
@@ -53,14 +54,6 @@ export const metadata: Metadata = {
     description: 'Track all your gift cards in one place. Get reminders before they expire.',
     images: ['/CardlyGooglePlayIcon.png'],
   },
-  alternates: {
-    canonical: 'https://cardly.app',
-  },
-  verification: {
-    // Add Google Search Console and Bing verification codes when available
-    // google: 'your-google-verification-code',
-    // other: { 'msvalidate.01': 'your-bing-verification-code' },
-  },
 };
 
 export default function RootLayout({
@@ -71,9 +64,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Providers>
-          {children}
-        </Providers>
+        <ClientLayout>
+          <Navbar />
+          <main>{children}</main>
+        </ClientLayout>
       </body>
     </html>
   );
